@@ -20,11 +20,43 @@ namespace firstproject_pt5 {
             rect1.length=63;    // To prove it's a value, not a reference. Values does not change. 
 
             Console.WriteLine("rect2.length = {0}", rect2.length);
+            Console.WriteLine();
+            Console.WriteLine();
 
 
-            //      Classes     menu > project > add class, choose name and save
+            //      Classes     (menu > project > add class, choose name and save)
+            Animal fox = new Animal() {
+                name="Red",
+                sound="Raaww"
+            };
+            Animal cat = new Animal() {
+                name="Batman",
+                sound="Mjauuu"
+            };
+
+            fox.MakeSound();    // To make the console print the "MakeSound" string (see Animal.cs)
+            cat.MakeSound();
+            Console.WriteLine("# of Animals = {0}", Animal.getNumberOfAnimals());
+            Console.WriteLine();
+            Console.WriteLine();
 
 
+            //      Utility class   (menu > project > add class, choose name and save)
+            Console.WriteLine("Area of Rectangle : {0}", ShapeMath.GetArea("rectangle", 5, 6));
+            Console.WriteLine("Area of Triangle : {0}", ShapeMath.GetArea("triangle", 5, 6));
+            Console.WriteLine("Area of Circle : {0}", ShapeMath.GetArea("circle", 5, 6));
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+            //      Nullables types 
+            int? aNumber = null;    // "?" makes is possible for a data to be null
+            if (aNumber==null) {
+                Console.WriteLine("aNumber is null");
+            }
+            if(!aNumber.HasValue) {     // "!" is an inverter
+                Console.WriteLine("aNumber is still null");
+            }
 
 
             Console.ReadLine();
@@ -43,11 +75,7 @@ namespace firstproject_pt5 {
             public double Area() {
                 return length*width;
             }
+
         }
-
-
-        //      Classes
-
-
     }
 }
