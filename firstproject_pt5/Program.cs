@@ -39,7 +39,7 @@ namespace firstproject_pt5 {
             Console.WriteLine("# of Animals = {0}", Animal.getNumberOfAnimals());
             Console.WriteLine();
             Console.WriteLine();
-
+             
 
             //      Utility class   - ShapeMath.cs      (menu > project > add class, choose name and save)
             Console.WriteLine("Area of Rectangle : {0}", ShapeMath.GetArea("rectangle", 5, 6));
