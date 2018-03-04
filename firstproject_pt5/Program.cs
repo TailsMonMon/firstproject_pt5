@@ -24,7 +24,7 @@ namespace firstproject_pt5 {
             Console.WriteLine();
 
 
-            //      Classes     - Animal.cs     (menu > project > add class, choose name and save)
+            //      Classes     - Animal.cs     (menu > project > add class, choose name and save) 
             Animal fox = new Animal() {
                 name="Red",
                 sound="Raaww"
