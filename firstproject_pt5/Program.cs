@@ -9,22 +9,22 @@ namespace firstproject_pt5 {
         static void Main(string[] args) {
 
             //      Structures and stuff around that
-            Rectangle rect1;
+            Rectangle rect1;    // To create a rectangle from struct
             rect1.length=10;
-            rect1.width=5;
-            Console.WriteLine("Area of rect1 = {0}", rect1.Area());
+            rect1.width=5; 
+            Console.WriteLine("Area of rect1 is {0}", rect1.Area());
 
-            Rectangle rect2 = new Rectangle(5, 2);
+            Rectangle rect2 = new Rectangle(5, 2);  // Another way to create a rectangle
 
-            rect2=rect1;
-            rect1.length=63;    // To prove it's a value, not a reference. Values does not change. 
+            rect2=rect1;    // rect2 is the same as rect1
+            rect1.length=63;    // To prove it's a value, not a reference. Values does not change. This basicly gets ignored. 
 
             Console.WriteLine("rect2.length = {0}", rect2.length);
             Console.WriteLine();
             Console.WriteLine();
 
 
-            //      Classes     (menu > project > add class, choose name and save)
+            //      Classes     - Animal.cs     (menu > project > add class, choose name and save)
             Animal fox = new Animal() {
                 name="Red",
                 sound="Raaww"
@@ -41,7 +41,7 @@ namespace firstproject_pt5 {
             Console.WriteLine();
 
 
-            //      Utility class   (menu > project > add class, choose name and save)
+            //      Utility class   - ShapeMath.cs      (menu > project > add class, choose name and save)
             Console.WriteLine("Area of Rectangle : {0}", ShapeMath.GetArea("rectangle", 5, 6));
             Console.WriteLine("Area of Triangle : {0}", ShapeMath.GetArea("triangle", 5, 6));
             Console.WriteLine("Area of Circle : {0}", ShapeMath.GetArea("circle", 5, 6));
